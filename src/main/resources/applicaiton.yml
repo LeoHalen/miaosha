@@ -1,0 +1,43 @@
+
+# config mybatis
+mybatis:
+  type-aliases-package: site.zgcoding.miaosha.model
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 300
+
+spring:
+  datasource:
+    default:
+      jdbc-url: jdbc:mysql://xxx:3306/seckill?useUnicode=true&characterEncoding=utf8
+      username: xxx
+      password: xxx
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      connection-timeout: 20000
+      maximum-pool-size: 12
+      minimum-idle: 1
+      max-lifetime: 1200000
+      auto-commit: true
+      connection-test-query: SELECT 1
+      test-while-idle: true
+      time-between-eviction-runs-millis: 3600000
+  redis:
+    host: xxx
+    port: 6379
+    password: xxx
+    # 连接超时时间（毫秒）
+    timeout: 10000
+    # Redis默认情况下有16个分片，这里配置具体使用的分片，默认是0
+    database: 0
+    lettuce:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制） 默认 8
+        max-active: 100
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        #        max-wait: -1
+        max-wait: 10000
+        # 连接池中的最大空闲连接 默认 8
+        max-idle: 1
+        # 连接池中的最小空闲连接 默认 0
+        min-idle: 0
