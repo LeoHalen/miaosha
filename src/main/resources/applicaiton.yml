@@ -1,12 +1,4 @@
 
-# config mybatis
-mybatis:
-  type-aliases-package: site.zgcoding.miaosha.model
-  configuration:
-    map-underscore-to-camel-case: true
-    default-fetch-size: 100
-    default-statement-timeout: 300
-
 spring:
   datasource:
     default:
@@ -41,3 +33,11 @@ spring:
         max-idle: 1
         # 连接池中的最小空闲连接 默认 0
         min-idle: 0
+
+# config mybatis
+mybatis:
+  type-aliases-package: site.zgcoding.miaosha.model
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 300
