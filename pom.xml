@@ -26,9 +26,9 @@
         <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
         <sentinel.version>1.7.0</sentinel.version>
         <mybatis.spring.version>2.1.1</mybatis.spring.version>
-        <lombok.version>1.18.8</lombok.version>
+        <lombok.version>1.18.10</lombok.version>
         <shiro.version>1.4.2</shiro.version>
-        <slf4j.version>1.7.29</slf4j.version>
+        <slf4j-api.version>1.7.30</slf4j-api.version>
         <lombok.version>1.18.10</lombok.version>
         <guava.version>29.0-jre</guava.version>
         <commons-codec.version>1.13</commons-codec.version>
@@ -94,6 +94,11 @@
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!-- 数据库相关 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -137,6 +142,15 @@
             <artifactId>commons-codec</artifactId>
             <version>${commons-codec.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api.version}</version>
+        </dependency>
     </dependencies>
 </project>
