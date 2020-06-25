@@ -1,11 +1,11 @@
-package site.zgcoding.miaosha.vo;
+package site.halenspace.miaosha.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
-import site.zgcoding.miaosha.validator.MobileCheck;
+import site.halenspace.miaosha.validator.MobileCheck;
 
 import javax.validation.constraints.NotNull;
 

@@ -1,11 +1,10 @@
-package site.zgcoding.miaosha.controller;
+package site.halenspace.miaosha.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import site.zgcoding.miaosha.model.LoginRequest;
-import site.zgcoding.miaosha.vo.LoginVo;
+import site.halenspace.miaosha.vo.LoginVo;
 
 import javax.validation.Valid;
 import java.io.UnsupportedEncodingException;

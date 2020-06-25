@@ -1,9 +1,8 @@
-package site.zgcoding.miaosha.service;
+package site.halenspace.miaosha.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import site.zgcoding.miaosha.model.LoginRequest;
-import site.zgcoding.miaosha.vo.LoginVo;
+import site.halenspace.miaosha.vo.LoginVo;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;

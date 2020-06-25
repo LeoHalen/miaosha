@@ -1,4 +1,4 @@
-package site.zgcoding.miaosha.utils;
+package site.halenspace.miaosha.utils;
 
 import org.apache.commons.codec.digest.DigestUtils;
 

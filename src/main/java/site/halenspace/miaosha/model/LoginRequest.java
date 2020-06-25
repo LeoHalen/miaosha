@@ -1,4 +1,4 @@
-package site.zgcoding.miaosha.model;
+package site.halenspace.miaosha.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

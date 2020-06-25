@@ -1,7 +1,7 @@
-package site.zgcoding.miaosha.validator;
+package site.halenspace.miaosha.validator;
 
 import org.apache.commons.lang3.StringUtils;
-import site.zgcoding.miaosha.utils.ValidatorUtil;
+import site.halenspace.miaosha.utils.ValidatorUtil;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

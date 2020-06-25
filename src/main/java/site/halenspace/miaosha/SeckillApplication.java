@@ -1,4 +1,4 @@
-package site.zgcoding.miaosha;
+package site.halenspace.miaosha;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

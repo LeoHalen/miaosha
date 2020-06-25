@@ -1,4 +1,4 @@
-package site.zgcoding.miaosha.validator;
+package site.halenspace.miaosha.validator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
