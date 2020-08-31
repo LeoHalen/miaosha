@@ -3,10 +3,10 @@ package site.halenspace.common.redis;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cache.CacheManager;
-import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
@@ -17,13 +17,13 @@ import org.springframework.data.redis.serializer.RedisSerializationContext;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import site.halenspace.common.core.constant.SymbolPool;
 import site.halenspace.common.redis.properties.CacheManagerProperties;
+import site.halenspace.common.redis.repository.RedisCacheRepository;
 import site.halenspace.common.redis.serializer.RedisObjectSerializer;
 
 import javax.annotation.PostConstruct;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.StringJoiner;
 
 /**
  * @Author Zg.Li · 2020/8/31
@@ -41,6 +41,12 @@ public class RedisAutoConfiguration {
     @PostConstruct
     public void init() {
         log.info("Common 'Redis-Cache-Manager': enabled");
+    }
+
+    @Bean
+    @ConditionalOnMissingBean
+    public RedisCacheRepository cacheRepository(RedisTemplate<String, Object> redisTemplate) {
+        return new RedisCacheRepository(redisTemplate);
     }
 
     @Bean
