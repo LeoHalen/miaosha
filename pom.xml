@@ -38,7 +38,7 @@
         <shiro.version>1.4.2</shiro.version>
         <slf4j-api.version>1.7.30</slf4j-api.version>
         <lombok.version>1.18.10</lombok.version>
-        <guava.version>29.0-jre</guava.version>
+        <guava.version>32.0.0-jre</guava.version>
         <commons-codec.version>1.13</commons-codec.version>
     </properties>
 
